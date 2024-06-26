@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=10, minimum-scale=1.0">
+    <title>Camping</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</head>
+<body class="body">
+    <nav class="nav_bar">
+        <ul class="sidebar">
+            <li onclick="closeSidebar()"><a><box-icon name='x'></box-icon></a></li>
+            <li><a href="#">Pesquisar</a></li>
+            <li><a href="#">CADASTRO</a></li>
+            <li><a href="#">LOGIN</a></li>
+            <li><a href="#">CARRINHO</a></li>
+        </ul>
+        <ul class="menuPrincipal">
+            <li><a href="#">Logo</a></li>
+            <li class="pesquisar"><input type="text" placeholder="Pesquisar"></li>
+            <li class="portCelular"><a href="#">CADASTRO</a></li>
+            <li class="portCelular"><a href="#">LOGIN</a></li>
+            <li class="portCelular"><a href="#"><box-icon name='cart' style="margin-right: 10px; fill: var(--cor-verde-floresta)"></box-icon>CARRINHO</a></li>
+            <li class="btnMenu" onclick="showSidebar()"><a><box-icon name='menu'></box-icon></a></li>
+        </ul>
+    </nav>
+    <nav class="navSecoes" id="secoesID">
+        <ul class="secoes">
+            <li><a href="#">Acampamento e Trilha</a></li>
+            <li><a href="#">Ciclismo</a></li>
+            <li><a href="#">Aquatico</a></li>
+            <li><a href="#">Corida</a></li>
+            <li><a href="#">Fitness</a></li>
+            <li><a href="#">Viagem</a></li>
+            <li><a href="#">Ofertas</a></li>
+        </ul>
+    </nav>
+    
+    <div class="bannercard1">
+      <div class="banner">
+        <ul class="cards">
+            <li class="cards_item" id="combo1">
+              <div class="card">
+                <a href="#">
+                  <div class="card_image"><img src="IMG/combo3.png"></div>
+                  <div class="card_content">
+                    <h2 class="card_title"><br> Combo Acampamento</h2>
+                    <p class="card_text">30% OFF</p>
+                    <button class="btn-cd card_btn">SAIBA MAIS</button>
+                  </div>
+                </a>
+              </div>
+            </li>
+            <li class="cards_item" id="combo2">
+              <div class="card">
+                <a href="#">
+                  <div class="card_image"><img src="IMG/combo1.png"></div>
+                  <div class="card_content">
+                    <h2 class="card_title"><br> Combo Bike</h2>
+                    <p class="card_text">20% OFF</p>
+                    <button class="btn-cd card_btn">SAIBA MAIS</button>
+                  </div>
+                </a>
+              </div>
+            </li>
+            <li class="cards_item" id="combo3">
+              <div class="card">
+                <a href="#">
+                  <div class="card_image"><img src="IMG/combo2.png"></div>
+                  <div class="card_content">
+                    <h2 class="card_title"><br> Combo Esporte Aquiatico</h2>
+                    <h1 class="card_text">40% OFF</h1>
+                    <button class="btn-cd card_btn">SAIBA MAIS</button>
+                  </div>
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+    </div>
+
+    
+  <div class="teste">
+    <h1 class="tituloTr">Tendências do Momento!</h1>
+    <div id="gridTrendings">
+      <div id="div1" class="itemTrending"><a href="#"><img src="IMG/trending1.png">
+      <h1>Co-op</h1></a></div>
+      <div id="div2" class="itemTrending"><a href="#"><img src="IMG/trending2.png">
+      <h1>Patagonia</h1></a></div>
+      <div id="div3" class="itemTrending"><a href="#"><img src="IMG/trending3.png">
+      <h1>Hoka</h1></a></div>
+      <div id="div4" class="itemTrending"><a href="#"><img src="IMG/trending4.png">
+      <h1>Garmin</h1></a></div>
+    </div>
+  </div>
+
+  <br><br><br>
+
+  <div class="prinCategorias">
+    <div class="gridCategorias">
+      <div id="divCat1"><img src="IMG/categoria1.png" alt="">
+        <div class="conteudoCat">
+
+        </div>
+      </div>
+      <div id="divCat2"><img src="IMG/categoria2.png" alt="">
+        <div class="conteudoCat">
+
+        </div>
+      </div>
+      <div id="divCat3"><img src="IMG/categoria3.png" alt="">
+        <div class="conteudoCat">
+
+        </div>
+      </div>
+      <div id="divCat4"><img src="IMG/categoria4.png" alt="">
+        <div class="conteudoCat">
+
+        </div>
+      </div>
+      <div id="divCat5"><img src="IMG/categoria5.png" alt="">
+        <div class="conteudoCat">
+
+        </div>
+      </div>
+      <div id="divCat6"><img src="IMG/categoria6.png" alt="">
+        <div class="conteudoCat">
+
+        </div>
+      </div>
+      <div id="divCat7"><img src="IMG/categoria7.png" alt="">
+        <div class="conteudoCat">
+
+        </div>
+      </div>
+      <div id="divCat8"><img src="IMG/categoria8.png" alt="">
+        <div class="conteudoCat">
+
+        </div>
+      </div>
+      <div id="divCat9"><img src="IMG/categoria9.png" alt="">
+        <div class="conteudoCat">
+
+        </div>
+      </div>
+      <div id="divCat10"><img src="IMG/categoria10.png" alt="">
+        <div class="conteudoCat">
+
+        </div>
+      </div>
+    </div>
+  </div>
+    
+
+
+    <script src="script.js"></script>
+</body>
+</html>
