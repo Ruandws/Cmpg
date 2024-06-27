@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=Open+Sans:wght@300;400;500;600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+:root {
+    --cor-background: #fbfcf9;
+    --cor-verde-floresta: #064109;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: var(--cor-background);
+}
+
+.seta {
+    position: absolute;
+    left: 8rem;
+    top: 8rem;
+    transform: scale(1.7, 1.7);
+}
+
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: white;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 9999;
+}
+
+.loader {
+    border: 5px solid transparent;
+    border-top: 5px solid var(--cor-verde-floresta);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+}
+
+.no-scroll {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+}
+
+.form {
+    width: 50%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 3rem;
+    z-index: 1;
+}
+
+.form-header {
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-header h1::after {
+    content: '';
+    display: block;
+    width: 5rem;
+    height: 0.3rem;
+    background: var(--cor-verde-floresta);
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 10px;
+}
+
+.input-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    width: 100%;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.1rem;
+}
+
+.input-box input {
+    margin: 0.6rem 0;
+    padding: 0.8rem 1.2rem;
+    border: solid 1px rgb(199, 199, 199);
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #0000001c;
+    font-size: 0.8rem;
+    width: 100%; /* Garante que os inputs ocupem toda a largura do pai */
+}
+
+.input-box input:hover {
+    border-color: var(--cor-verde-floresta);
+}
+
+.input-box input:focus-visible {
+    outline: 1px solid var(--cor-verde-floresta);
+}
+
+.input-box input::placeholder {
+    color: #000000be;
+}
+
+.button-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 1rem; 
+    width: 93%; 
+}
+
+.btn-enviar, .btn-voltar {
+    padding: 10px 20px;
+    border: solid 1px;
+    border-color: var(--cor-verde-floresta);
+    background-color: transparent;
+    transition: all 0.3s ease-out !important;
+    border-radius: 5px;
+    width: 100%; 
+}
+
+.btn-enviar:hover, .btn-voltar:hover {
+    background-color: var(--cor-verde-floresta) !important;
+    color: #fff !important;
+    box-shadow: none !important;
+}
+
+footer {
+    background: #084c94;
+    color: #fff;
+}
+
+.social-icon {
+    color: #fff;
+}
+
+.social-icon:hover {
+    color: var(--cor-verde-floresta);
+}
+
+.logo {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 40%;
+    max-width: 400px;
+    height: auto;
+    z-index: 0;
+}
+
+@media (max-width: 768px) {
+    .form {
+        width: 90%;
+        padding: 2rem;
+    }
+
+    .input-group {
+        grid-template-columns: 1fr;
+    }
+
+    .btn-enviar {
+        grid-column: span 1;
+    }
+
+    .logo {
+        width: 60%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .logo {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0.3;
+        width: 80%;
+        max-width: 200px;
+        display: block;
+        z-index: 999;
+    }
+
+    .form {
+        width: 100%;
+        padding: 2rem;
+    }
+
+    .input-box input {
+        width: calc(100% - 2rem); 
+        padding: 0.8rem 1rem; 
+        box-sizing: border-box; 
+        
+    }
+
+    .btn-enviar, .btn-voltar {
+        width: calc(100% - 1rem); /* Largura dos botões */
+    }
+}
